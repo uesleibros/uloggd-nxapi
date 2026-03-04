@@ -1,6 +1,10 @@
-import CoralApi from 'nxapi/coral';
-
 process.env.NXAPI_DATA_PATH = '/tmp';
+process.env.XDG_DATA_HOME = '/tmp';
+process.env.XDG_CACHE_HOME = '/tmp';
+process.env.XDG_STATE_HOME = '/tmp';
+process.env.HOME = '/tmp';
+
+import CoralApi from 'nxapi/coral';
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
