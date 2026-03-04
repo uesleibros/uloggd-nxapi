@@ -4,7 +4,10 @@ process.env.XDG_CACHE_HOME = '/tmp';
 process.env.XDG_STATE_HOME = '/tmp';
 process.env.HOME = '/tmp';
 
+import { addUserAgent } from 'nxapi';
 import CoralApi from 'nxapi/coral';
+
+addUserAgent('uloggd-nxapi/1.0.0 (+https://github.com/uesleibros/uloggd-nxapi)');
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
