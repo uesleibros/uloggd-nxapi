@@ -1,4 +1,4 @@
-import { CoralApi } from 'nxapi/coral';
+import { CoralApi } from 'nxapi';
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
