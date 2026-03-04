@@ -1,4 +1,4 @@
-import { CoralApiInterface } from 'nxapi';
+import { CoralApi } from 'nxapi/coral';
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -12,7 +12,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const nso = CoralApiInterface.createWithSessionToken(sessionToken);
+        const { nso } = await CoralApi.createWithSessionToken(sessionToken);
         const user = await nso.getCurrentUser();
 
         res.json({
@@ -25,6 +25,7 @@ export default async function handler(req, res) {
             }
         });
     } catch (error) {
+        console.error('Login error:', error);
         res.status(500).json({
             success: false,
             error: error.message
