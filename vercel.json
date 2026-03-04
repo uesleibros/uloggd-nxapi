@@ -5,5 +5,9 @@
       "maxDuration": 30,
       "includeFiles": "node_modules/nxapi/resources/**"
     }
+  },
+  "env": {
+    "NXAPI_DATA_PATH": "/tmp/nxapi",
+    "NXAPI_USER_AGENT": "uloggd-nxapi/1.0.0 (+https://github.com/seu-usuario/uloggd-nxapi)"
   }
 }
