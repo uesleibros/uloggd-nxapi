@@ -1,0 +1,8 @@
+{
+  "name": "uloggd-nxapi",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "nxapi": "^1.6.1"
+  }
+}
