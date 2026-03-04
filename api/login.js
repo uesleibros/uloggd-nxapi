@@ -1,4 +1,7 @@
+import path from 'path';
 import CoralApi from 'nxapi/coral';
+
+process.env.NXAPI_DATA_PATH = '/tmp/nxapi-data';
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
