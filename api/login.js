@@ -1,4 +1,7 @@
-import { CoralApi } from 'nxapi';
+import { addUserAgent } from 'nxapi';
+import CoralApi from 'nxapi/coral';
+
+addUserAgent('uloggd-nxapi/1.0.0 (+https://github.com/uesleibros/uloggd-nxapi)');
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -12,7 +15,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { nso } = await CoralApi.createWithSessionToken(sessionToken);
+        const { nso, data } = await CoralApi.createWithSessionToken(sessionToken);
         const user = await nso.getCurrentUser();
 
         res.json({
