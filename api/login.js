@@ -4,6 +4,7 @@ process.env.XDG_CACHE_HOME = '/tmp';
 process.env.XDG_STATE_HOME = '/tmp';
 process.env.HOME = '/tmp';
 process.env.NXAPI_ZNCA_API = 'imink'
+process.env.NXAPI_ENABLE_REMOTE_CONFIG = '0'
 
 import { addUserAgent } from 'nxapi';
 import CoralApi from 'nxapi/coral';
